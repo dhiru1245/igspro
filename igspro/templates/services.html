@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block contant %}
+
+
+
+
+
+    <html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-3" style="background-color:lavender;"><marquee direction="down"height="700">  <img id="2" src="/static/images/igs-logo.png" alt="missing image" class="img-responsive img-thumbnail" height="250" > </marquee></div>
+    <div class="col-sm-6" style="background-color:lavenderblush;">
+
+                <center>
+
+                    <table border="1" style="width:600px;background-color: yellow">
+                        <tr style="text-align: center;color: red">
+
+                      {% for s in serv %}
+                          <tr style="text-align: center;color: red">
+
+                           <td>
+                             <img  src="{{ s.imgage.url }}"  height="200px", width="300px" >
+                           </td>
+                          <td>
+                            {{ s.name}}
+                            {{ s.deg}}
+
+                            </td>
+
+
+                          </tr>
+                      {% endfor %}</table>
+                          </center>
+
+
+
+    </div>
+    <div class="col-sm-3" style="background-color:lavender;"><marquee direction="up" height="700"> <img id="2" src="/static/images/a.jpg" alt="missing image" class="img-responsive img-thumbnail" height="250" > </marquee></div>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
+

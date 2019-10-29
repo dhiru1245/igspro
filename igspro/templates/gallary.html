@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block contant %}
+
+<div class="container" style="margin-left:170px;right: 30px">
+   <div class="row">
+
+    {% for i in img %}
+
+       <img  src="{{ i.image.url }}"  height="200px", width="250px" >
+
+    {% endfor %}
+   </div>
+</div>
+{% endblock %}
